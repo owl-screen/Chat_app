@@ -24,12 +24,6 @@ Backend	Java, Spring Boot
 Communication	WebSocket
 Build Tool	Maven
 Version Control	Git, GitHub
-🗂️ Project Structure
-Chat_app/
-├── backend/               # Spring Boot backend (controllers, services, WebSocket config)
-├── frontend/              # HTML, CSS, and JavaScript frontend
-├── pom.xml                # Maven build configuration
-└── README.md
 
 ⚙️ Installation & Setup
 1. Clone the repository
