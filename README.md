@@ -5,6 +5,14 @@
 A real-time chat application built using Spring Boot and WebSocket for seamless, bi-directional communication between users.
 It features a responsive web interface created with HTML, CSS, and JavaScript for instant messaging.
 
+
+
+https://github.com/user-attachments/assets/6ca26b8f-02fa-4381-a734-52f16f2992a0
+
+
+
+
+
 🚀 Features
 
 💬 Real-Time Messaging: Send and receive messages instantly using WebSocket connections.
