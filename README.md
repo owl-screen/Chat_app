@@ -1,88 +1,64 @@
-# Chat Application
+# Spring Boot & React Chat Application
 
-Welcome to my Chat Application! This project is a full-fledged realtime messaging application with a user interface 
-inspired by WhatsApp. It enables users to exchange messages individually or within groups.
+💬 A real-time, full-fledged messaging application featuring a responsive web user interface inspired by WhatsApp. Built with a React frontend and a Spring Boot backend utilizing WebSockets for seamless, bi-directional communication.
 
-## Features
+## 🚀 Features
 
-- **Realtime Messaging:** Experience seamless, real-time messaging with instant message delivery.
-- **Individual Messaging:** Send private messages to other users.
-- **Group Messaging:** Create and edit groups to communicate with more than one user.
-- **Login And Signup:** Securely access the application with a login and signup system.
+- **Realtime Messaging:** Experience seamless, instant message delivery using WebSocket connections without page reloads.
+- **Individual Messaging:** Send private, secure messages to other users.
+- **Group Messaging:** Create, manage, and edit group chats to communicate with multiple users simultaneously.
+- **Secure Authentication:** Securely access the application with a robust Login and Signup system.
+- **Multi-User Support:** Multiple clients can connect, register accounts, and chat interactively at the same time.
 
-## Technologies
+## 🧰 Tech Stack
 
-- **Frontend:** Typescript with React
-- **Backend:** Java with Spring Boot, Spring Security, Spring Websocket and Spring Data JPA
-- **Database:** PostgreSQL
-- **Authentication:** JSON Web Token (JWT)
-- **State Management:** Redux, Thunk
-- **Component Library:** Material UI
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | TypeScript, React, Material UI (MUI) |
+| **State Management** | Redux, Thunk |
+| **Backend** | Java, Spring Boot, Spring Security, Spring WebSocket, Spring Data JPA |
+| **Database** | PostgreSQL |
+| **Authentication** | JSON Web Token (JWT) |
+| **Build Tool** | Maven |
 
-## Getting Started
+## ⚙️ Installation & Setup
 
 ### Prerequisites
+Ensure you have **Node.js (npm)**, **Java (JDK)**, and **Maven (mvn)** installed on your machine.
 
-Ensure you have **npm** and **mvn** installed on your machine.
+### Steps to Run Locally
 
-### Installation
+1. **Clone the repository:**
+   ```bash  
+   git clone https://github.com
+   cd Chat_app
+   ```
 
-1. **Clone the repository:**  
-    ```bash  
-    git clone https://github.com/nicolasjusten95/chat-app.git
-    ```
-   
-2. **Navigate to the Frontend and install the required dependencies:**  
-    ```bash
-    cd frontend
-    npm install
-    ```
-   
-3. **Navigate to the Backend and install the required dependencies:**  
-    ```bash
-    cd backend
-    mvn clean install
-    ```
-   
-4. **Configure Environment Variables:**  
-   Configure the Spring Boot application.properties for database and other configurations.
+2. **Setup the Frontend:**
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
+   *The frontend application will start running on `http://localhost:3000`.*
 
-5. **Run the Application:**
-    - Start the frontend:
-      ```bash
-      npm start
-      ```
-    - Start the backend:
-      ```bash
-      mvn spring-boot:run
-      ```
-6. **Access the Application:**
-   - Open your browser and visit [http://localhost:3000](http://localhost:3000) to use the Realtime Chat Application.
-   - You can log in with a sample user to access the app with predefined data:
-     - email: luke.skywalker@test.com
-     - password: luke
-   - Or you can create your own Accounts and start chatting!
+3. **Setup the Backend:**  
+   Configure your database credentials in the Spring Boot `application.properties` file located inside the backend resources, then run:
+   ```bash
+   cd ../backend
+   mvn clean install
+   mvn spring-boot:run
+   ```
+   *The backend server will spin up on `http://localhost:8080`.*
 
-## Images
+4. **Access the Application:**
+   * Open your browser and visit [http://localhost:3000](http://localhost:3000).
+   * You can create your own account or log in with a sample predefined user:
+      * **Email:** `luke.skywalker@test.com`
+      * **Password:** `luke`
 
-View your chats with other users:
-![image Screenshot](./images/homepage.png)
+## 🧩 How It Works
 
-Send messages to other users:
-![image Screenshot](./images/send_messages.png)
-
-Log into your account:
-![image Screenshot](./images/signin.png)
-
-Create a new account:
-![image Screenshot](./images/signup.png)
-
-Start a new chat:
-![image Screenshot](./images/start_new_group_chat.png)
-
-Edit your chats:
-![image Screenshot](./images/edit_group_chat.png)
-
-
-
- 
+1. When a user transmits a message, the React frontend passes the payload across an active WebSocket connection.
+2. The Spring Boot backend interceptor validates the user session via JWT, processes the message routing, and persists it to the PostgreSQL database.
+3. The server immediately broadcasts the payload to all designated active WebSocket subscribers, rendering updates dynamically via Redux state management.

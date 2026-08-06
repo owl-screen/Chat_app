@@ -1,4 +1,4 @@
-# Dependencies
+# Node Dependencies
 node_modules/
 
 # Maven & Build outputs
@@ -7,13 +7,32 @@ build/
 *.jar
 *.war
 *.ear
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# IDE & OS files
+# IDE & Editor files (IntelliJ, VS Code, STS, NetBeans)
 .idea/
-.vscode/
+*.iws
 *.iml
 *.ipr
-*.iws
+.vscode/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# System & OS Files
 .DS_Store
 Thumbs.db
 
