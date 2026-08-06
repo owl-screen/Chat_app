@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Maven & Build outputs
+target/
+build/
+*.jar
+*.war
+*.ear
+
+# IDE & OS files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
