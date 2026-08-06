@@ -3,8 +3,6 @@
 Welcome to my Chat Application! This project is a full-fledged realtime messaging application with a user interface 
 inspired by WhatsApp. It enables users to exchange messages individually or within groups.
 
-![image Screenshot](./images/homepage.png)
-
 ## Features
 
 - **Realtime Messaging:** Experience seamless, real-time messaging with instant message delivery.
@@ -85,14 +83,6 @@ Start a new chat:
 Edit your chats:
 ![image Screenshot](./images/edit_group_chat.png)
 
-## Contribution Guidelines
 
-I welcome contributions! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-Thank you for using and contributing to the Realtime Chat Application!
 
  
